@@ -27,6 +27,34 @@
             display: none;
         }
 
+        .line{
+            overflow: hidden;
+            white-space: nowrap;
+            border-right: 2px solid rgba(200,200, 200, 0.8);
+        }
+
+        .digitar-animation{
+            animation: piscar 500ms steps(40) infinite normal  ,digitar 3s steps(40) 1s normal both;
+        }
+
+        @keyframes digitar{
+            from{
+                width:0;
+            }
+            to{
+                width: 40%;
+            }
+        }
+
+        @keyframes piscar{
+            from{
+                border-right-color:rgba(200,200, 200, 0.8);
+            }
+            to{
+                border-right-color:transparent;
+            }
+        }
+
         @media screen and (max-width: 768px) {
             #textoHeader {
                 text-align: center !important;
@@ -40,19 +68,27 @@
                 display: block;
             }
 
+            @keyframes digitar{
+            from{
+                width:0;
+            }
+            to{
+                width: 80%;
+            }
+        }
         }
     </style>
 </head>
 
 <body id="page-top">
     <!-- Navigation-->
-    <nav class="navbar navbar-expand-lg bg-dark text-uppercase fixed-top" id="mainNav">
+    <nav class="navbar navbar-expand-lg bg-dark text-uppercase fixed-top" id="mainNav" style="height: 60px">
         <div class="container">
 
             <button
                 class="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold bg-primary text-white rounded"
                 type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
-                aria-expanded="false" aria-label="Toggle navigation">
+                aria-expanded="false" aria-label="Toggle navigation" style="margin-top: -1%;">
                 Menu
                 <i class="fas fa-bars"></i>
             </button>
@@ -69,7 +105,7 @@
         </div>
     </nav>
     <!-- Masthead-->
-    <header class="masthead bg-dark text-white text-center row" style="margin:0;">
+    <header class="masthead  text-white text-center row" style="margin:0; background-color: #0c0c0c;">
         <div class="col-xl-6 col-sm-12 container d-flex align-items-center flex-column">
             <!-- Masthead Avatar Image-->
             <img class="masthead-avatar mb-5 rounded-circle" src="assets/img/avatar.jpg" alt="" />
@@ -80,10 +116,10 @@
                 style="width: 400px; z-index: 10; position: absolute; margin-top: -40%; margin-left: -20%;">
             <br>
             <br>
-            <h1 id="textoHeader">Olá Pessoa!</h1>
+            <h1 id="textoHeader " class="line digitar-animation">Olá Pessoa!</h1>
             <br>
-            <p class="text-uppercase">Eu sou o joão pedro fortes. (esse cara da foto) <br> Se você está aqui é porque
-                quer saber um pouquinho sobre mim. <br>
+            <p class="text-uppercase ">Eu sou o joão pedro fortes. (esse cara da foto) Se você está aqui é porque
+                quer saber um pouquinho sobre mim. 
                 então... Let's go!
             </p>
 
