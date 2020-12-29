@@ -27,35 +27,56 @@
             display: none;
         }
 
-        .line{
+        .line {
             overflow: hidden;
             white-space: nowrap;
-            border-right: 2px solid rgba(200,200, 200, 0.8);
+            border-right: 2px solid rgba(200, 200, 200, 0.8);
         }
 
-        .digitar-animation{
-            animation: piscar 500ms steps(40) infinite normal  ,digitar 3s steps(40) 1s normal both;
+        .digitar-animation {
+            animation: piscar 500ms steps(40) infinite normal, digitar 3s steps(40) 1s normal both;
         }
 
-        @keyframes digitar{
-            from{
-                width:0;
+        @keyframes digitar {
+            from {
+                width: 0;
             }
-            to{
+
+            to {
                 width: 40%;
             }
         }
 
-        @keyframes piscar{
-            from{
-                border-right-color:rgba(200,200, 200, 0.8);
+        @keyframes piscar {
+            from {
+                border-right-color: rgba(200, 200, 200, 0.8);
             }
-            to{
-                border-right-color:transparent;
+
+            to {
+                border-right-color: transparent;
             }
         }
 
+        @media screen and (min-width: 769px) {
+            .textoProjeto {
+                display: inline;
+            }
+
+            .btn-card {
+                display: none;
+            }
+
+            .card-text {
+                display: none;
+            }
+
+        }
+
         @media screen and (max-width: 768px) {
+            .textoProjeto {
+                display: none;
+            }
+
             #textoHeader {
                 text-align: center !important;
             }
@@ -68,14 +89,15 @@
                 display: block;
             }
 
-            @keyframes digitar{
-            from{
-                width:0;
+            @keyframes digitar {
+                from {
+                    width: 0;
+                }
+
+                to {
+                    width: 80%;
+                }
             }
-            to{
-                width: 80%;
-            }
-        }
         }
     </style>
 </head>
@@ -119,7 +141,7 @@
             <h1 id="textoHeader " class="line digitar-animation">Olá Pessoa!</h1>
             <br>
             <p class="text-uppercase ">Eu sou o joão pedro fortes. (esse cara da foto) Se você está aqui é porque
-                quer saber um pouquinho sobre mim. 
+                quer saber um pouquinho sobre mim.
                 então... Let's go!
             </p>
 
@@ -135,55 +157,123 @@
             <hr>
             <br>
             <h4>Antes de mais nada, eu ainda sou um mero estudante sem experiência de mercado que gosta de fazer umas
-                paginas HTML. Então, sem mais delongas, <s> me arruma um Job aê</s>, deixo alguns dos meus projetos mais legais
+                paginas HTML. Então, sem mais delongas, <s> me arruma um Job aê</s>, deixo alguns dos meus projetos mais
+                legais
                 para vocês verem rsrs</h4>
             <br>
             <br>
-            <div class="row">
-                <div class="card col-md-6 col-lg-4 mb-5">
-                    <img class="card-img-top" src="assets/img/03 - Receita.png" alt="Card image cap"
-                        style="margin-top: 5%; height: 300px;">
-                    <div class="card-body">
-                        <h5 class="card-title">Pagina Html e css puro</h5>
-                        <p class="card-text">Primera pagina desenvolvida com hmtl e css responsivo para a materia de
-                            Engenharia Web</p>
-                        <a href="https://github.com/JoaoPedroFortes/siteAulaWeb" title="siteAulaWeb"
-                            class="btn btn-primary container">Ver Projeto</a>
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active ">
+                        <div class="card col-lg-5 col-md-6 mb-5" style="margin: 0 !important;">
+                            <img class="card-img-top" src="assets/img/03 - Receita.png" alt="Card image cap"
+                                style="margin-top: 5%; height: 300px;">
+                            <div class="card-body">
+                                <h5 class="card-title">Pagina Html e css puro</h5>
+                                <p class="card-text">Primera pagina desenvolvida com hmtl e css responsivo para a
+                                    materia de
+                                    Engenharia Web</p>
+                                <a href="https://github.com/JoaoPedroFortes/siteAulaWeb" title="siteAulaWeb"
+                                    class="btn btn-primary container btn-card">Ver Projeto</a>
+                            </div>
+                        </div>
+                        <div class="textoProjeto" style="float: right; margin-top: -30%; width: 50%;">
+                            <h4>Primera pagina desenvolvida com hmtl e css responsivo para a materia de Engenharia Web
+                            </h4>
+                            <br>
+                            <p> Nesse projeto foi feito o layout de um marketplace simples baseado em um mockup
+                                disponibilizado.</p>
+                            <a href="https://github.com/JoaoPedroFortes/siteAulaWeb" title="siteAulaWeb"
+                                class="btn btn-primary container ">Ver Projeto</a>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="card col-md-6 col-lg-5 mb-5">
+                            <img class="card-img-top" src="assets/img/calc.png" alt="Card image cap"
+                                style="margin-top: 5%;  height: 300px;">
+                            <div class="card-body">
+                                <h5 class="card-title">Calculadora responsiva JS</h5>
+                                <p class="card-text">Calculadora responsiva feita com HTML CSS e javaScript puro usando
+                                    conceito
+                                    de programação modular</p>
+                                <a href="https://github.com/JoaoPedroFortes/calculadoraJs" title="calculadoraJs"
+                                    class="btn btn-primary container btn-card">Ver Projeto</a>
+                            </div>
+                        </div>
+                        <div class="textoProjeto" style="float: right; margin-top: -35%; width: 50%;">
+                            <h4>Calculadora responsiva feita com HTML CSS e javaScript puro usando
+                                conceito
+                                de programação modular</h4>
+                            <br>
+                            <p> Nesse projeto foi feita uma calculara em javaScript Modular contento também a opção de
+                                histórico de calculos. <br> <br>
+                                Os calculos podem ser digitados através dos botões ou no input de expressão</p>
+                            <a href="https://github.com/JoaoPedroFortes/calculadoraJs" title="calculadoraJs"
+                                class="btn btn-primary container ">Ver Projeto</a>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="card col-md-6 col-lg-5 mb-5">
+                            <img class="card-img-top" src="assets/img/siteVue.png" alt="Card image cap"
+                                style="margin-top: 5%;  height: 300px;">
+                            <div class="card-body">
+                                <h5 class="card-title">Site Vue</h5>
+                                <p class="card-text">Front-end desenvolvido para realizar requisições de uma API rest
+                                    via AXIOS
+                                    utilizando Vue.JS</p>
+                                <a href="https://github.com/JoaoPedroFortes/SiteLojaemVue" title="SiteLojaemVue"
+                                    class="btn btn-primary container btn-card">Ver Projeto</a>
+                            </div>
+                        </div>
+                        <div class="textoProjeto" style="float: right; margin-top: -35%; width: 50%;">
+                            <h4>Front-end desenvolvido para realizar requisições de uma API rest
+                                via AXIOS
+                                utilizando Vue.JS</h4>
+                            <br>
+                            <p> Nesse projeto foi desenvolvido o Front-end utilizando VueJS e Axios para as requisições feitas em uma API disponibilizada. <br> <br>
+                                Foram feitas duas partes, sendo elas: Administrativa e Pagina do Cliente.</p>
+                                <a href="https://github.com/JoaoPedroFortes/SiteLojaemVue" title="SiteLojaemVue"
+                                class="btn btn-primary container ">Ver Projeto</a>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="card col-md-6 col-lg-5 mb-5">
+                            <img class="card-img-top" src="assets/img/sistemaCrud.png" alt="Card image cap"
+                                style="margin-top: 5%;  height: 250px;">
+                            <div class="card-body">
+                                <h5 class="card-title">Sistema Java Spring + front feito com hmtl css e VueJS</h5>
+                                <p class="card-text">DASHBOARD CRUD utilizando VUE.js e AXIOS fazendo requisições na api
+                                    desenvolvida em SPRING BOOT para a materia de Engenharia Web 2 </p>
+                                <a href="https://github.com/JoaoPedroFortes/t2-web2" title="CRUD"
+                                    class="btn btn-primary container btn-card">Ver Projeto</a>
+                            </div>
+                        </div>
+                        <div class="textoProjeto" style="float: right; margin-top: -35%; width: 50%;">
+                            <h4>DASHBOARD CRUD utilizando VUE.js e AXIOS fazendo requisições na api
+                                desenvolvida em SPRING BOOT para a materia de Engenharia Web 2 </h4>
+                            <br>
+                            <p> Nesse projeto foi desenvolvido um sistema completo utilizando Java Spring no back-end e VueJS e Axios no front-end. <br> <br>
+                                O front-end desenvolvido serve para Administrar os produtos e pessoas do sistema, sendo que o mesmo só pode ser utilizado por um usuario admin</p>
+                                <a href="https://github.com/JoaoPedroFortes/t2-web2" title="CRUD"
+                                class="btn btn-primary container">Ver Projeto</a>
+                        </div>
                     </div>
                 </div>
-                <div class="card col-md-6 col-lg-4 mb-5">
-                    <img class="card-img-top" src="assets/img/calc.png" alt="Card image cap"
-                        style="margin-top: 5%;  height: 300px;">
-                    <div class="card-body">
-                        <h5 class="card-title">Calculadora responsiva JS</h5>
-                        <p class="card-text">Calculadora responsiva feita com HTML CSS e javaScript puro usando conceito
-                            de programação modular</p>
-                        <a href="https://github.com/JoaoPedroFortes/calculadoraJs" title="calculadoraJs"
-                            class="btn btn-primary container">Ver Projeto</a>
-                    </div>
-                </div>
-                <div class="card col-md-6 col-lg-4 mb-5">
-                    <img class="card-img-top" src="assets/img/siteVue.png" alt="Card image cap"
-                        style="margin-top: 5%;  height: 300px;">
-                    <div class="card-body">
-                        <h5 class="card-title">Site Vue</h5>
-                        <p class="card-text">Front-end desenvolvido para realizar requisições de uma API rest via AXIOS
-                            utilizando Vue.JS</p>
-                        <a href="https://github.com/JoaoPedroFortes/SiteLojaemVue" title="SiteLojaemVue"
-                            class="btn btn-primary container">Ver Projeto</a>
-                    </div>
-                </div>
-                <div class="card col-md-6 col-lg-4 mb-5">
-                    <img class="card-img-top" src="assets/img/sistemaCrud.png" alt="Card image cap"
-                        style="margin-top: 5%;  height: 250px;">
-                    <div class="card-body">
-                        <h5 class="card-title">Sistema Java Spring + front feito com hmtl css e VueJS</h5>
-                        <p class="card-text">DASHBOARD CRUD utilizando VUE.js e AXIOS fazendo requisições na api desenvolvida em SPRING BOOT para a materia de  Engenharia Web 2 </p>
-                        <a href="https://github.com/JoaoPedroFortes/t2-web2" title="CRUD"
-                            class="btn btn-primary container">Ver Projeto</a>
-                    </div>
-                </div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
             </div>
+
         </div>
     </section>
     <!-- About Section-->
@@ -199,7 +289,7 @@
                 <div class="col-lg-4 ml-auto">
                     <p class="lead">Como já disse lá em cima, sou o João Pedro, mas podem me chamar de JP. Sou estudante
                         do 7º periodo do curso de Sistemas de Informação pela
-                        UNIVERSIDADE FEDERAL DE MATO GROSSO DO SUL. Sou aspirante a DEV com preferência em FRONT-END. 
+                        UNIVERSIDADE FEDERAL DE MATO GROSSO DO SUL. Sou aspirante a DEV com preferência em FRONT-END.
                     </p>
                 </div>
                 <div class="col-lg-4 mr-auto">
