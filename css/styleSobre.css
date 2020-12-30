@@ -1,0 +1,40 @@
+.imgSobre{
+    width: 50%;
+    height: 250px;
+}
+
+#living{
+    z-index: 1;
+    margin-top: -25%;
+    margin-left: 38%;
+}
+
+#pac{
+    z-index: 2;
+    margin-top: -10%;
+}
+
+@media screen and (max-width: 769px) {
+    .imgSobre{
+        display: none;
+    }
+    .textoSobre{
+       margin: 0;
+       right: 0;
+       float: right !important;
+    }
+
+}
+
+
+@media screen and (min-width: 770px) {
+    .textoSobre{
+       margin-left: -17%;
+    }
+    
+    .conhecer{
+        margin-top: -13%;
+        padding-left: 40%;
+    }
+}
+

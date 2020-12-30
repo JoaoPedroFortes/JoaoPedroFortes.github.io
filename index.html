@@ -17,7 +17,7 @@
         type="text/css" />
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="css/styles.css" rel="stylesheet" />
-
+    <link href="css/styleSobre.css" rel="stylesheet" />
     <style>
         .content-desktop {
             display: block !important;
@@ -104,7 +104,7 @@
 
 <body id="page-top">
     <!-- Navigation-->
-    <nav class="navbar navbar-expand-lg bg-dark text-uppercase fixed-top" id="mainNav" style="height: 60px">
+    <nav class="navbar navbar-expand-lg bg-light text-uppercase fixed-top" id="mainNav" style="height: 60px">
         <div class="container">
 
             <button
@@ -117,11 +117,11 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger"
-                            href="#portfolio">Projetos</a></li>
+                            href="#portfolio"  style="color:black !important">Projetos</a></li>
                     <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger"
-                            href="#about">Sobre mim</a></li>
+                            href="#about"  style="color:black !important">Sobre mim</a></li>
                     <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger"
-                            href="#contact">Contato</a></li>
+                            href="#contact"  style="color:black !important">Contato</a></li>
                 </ul>
             </div>
         </div>
@@ -235,9 +235,10 @@
                                 via AXIOS
                                 utilizando Vue.JS</h4>
                             <br>
-                            <p> Nesse projeto foi desenvolvido o Front-end utilizando VueJS e Axios para as requisições feitas em uma API disponibilizada. <br> <br>
+                            <p> Nesse projeto foi desenvolvido o Front-end utilizando VueJS e Axios para as requisições
+                                feitas em uma API disponibilizada. <br> <br>
                                 Foram feitas duas partes, sendo elas: Administrativa e Pagina do Cliente.</p>
-                                <a href="https://github.com/JoaoPedroFortes/SiteLojaemVue" title="SiteLojaemVue"
+                            <a href="https://github.com/JoaoPedroFortes/SiteLojaemVue" title="SiteLojaemVue"
                                 class="btn btn-primary container ">Ver Projeto</a>
                         </div>
                     </div>
@@ -257,9 +258,11 @@
                             <h4>DASHBOARD CRUD utilizando VUE.js e AXIOS fazendo requisições na api
                                 desenvolvida em SPRING BOOT para a materia de Engenharia Web 2 </h4>
                             <br>
-                            <p> Nesse projeto foi desenvolvido um sistema completo utilizando Java Spring no back-end e VueJS e Axios no front-end. <br> <br>
-                                O front-end desenvolvido serve para Administrar os produtos e pessoas do sistema, sendo que o mesmo só pode ser utilizado por um usuario admin</p>
-                                <a href="https://github.com/JoaoPedroFortes/t2-web2" title="CRUD"
+                            <p> Nesse projeto foi desenvolvido um sistema completo utilizando Java Spring no back-end e
+                                VueJS e Axios no front-end. <br> <br>
+                                O front-end desenvolvido serve para Administrar os produtos e pessoas do sistema, sendo
+                                que o mesmo só pode ser utilizado por um usuario admin</p>
+                            <a href="https://github.com/JoaoPedroFortes/t2-web2" title="CRUD"
                                 class="btn btn-primary container">Ver Projeto</a>
                         </div>
                     </div>
@@ -277,7 +280,7 @@
         </div>
     </section>
     <!-- About Section-->
-    <section class="page-section bg-dark text-white mb-0" id="about">
+    <section class="page-section text-white mb-0" id="about" style="background-color: #0c0c0c;">
         <div class="container">
             <!-- About Section Heading-->
             <h2 class="page-section-heading text-center text-uppercase text-white">Sobre mim</h2>
@@ -285,19 +288,30 @@
             <hr>
             <br>
 
-            <div class="row">
-                <div class="col-lg-4 ml-auto">
-                    <p class="lead">Como já disse lá em cima, sou o João Pedro, mas podem me chamar de JP. Sou estudante
+            <div class="row " style="margin-left: -15%;">
+                <div class="col-lg-5 ml-auto" style="float: left; margin-left: 20% !important;">
+                    <img src="./assets/img/living.jpeg" class="imgSobre  mb-5 " alt="pac">
+                    <img src="./assets/img/techx.jpeg" class="imgSobre" id="living" alt="">
+                    <img src="./assets/img/pacman.jpeg" class="imgSobre" id="pac" alt="">
+                </div>
+                <div class="col-lg-4 col-sm-12 ml-auto textoSobre">
+                    <p class="lead" style="text-align: left;  ">Como já disse lá em
+                        cima, sou o João Pedro, mas podem me chamar de JP. Sou estudante
                         do 7º periodo do curso de Sistemas de Informação pela
                         UNIVERSIDADE FEDERAL DE MATO GROSSO DO SUL. Sou aspirante a DEV com preferência em FRONT-END.
-                    </p>
-                </div>
-                <div class="col-lg-4 mr-auto">
-                    <p class="lead">Também sou Técnico em Informatica pelo programa PRONATEC (não, eu não sei consertar
+                        <br>
+                        <br>
+                        Também sou Técnico em Informatica pelo programa PRONATEC (não, eu não sei consertar
                         impressora). Sou Mineiro e falo UAI. Gosto muito de Aprender coisas novas e conhecer pessoas
-                        legais. Também sou viciado em participar de evento e Startup Weekends</p>
-                    <h5>Agora é a hora em que você quer me conhecer</h5>
+                        legais. Também sou viciado em participar de evento e Startup Weekends
+                    </p>
+
                 </div>
+            </div>
+            <div class="container conhecer" style="text-align: center;">
+                <br>
+                <br>
+                <h4>Agora é a hora em que você quer me conhecer !</h4>
             </div>
         </div>
     </section>
