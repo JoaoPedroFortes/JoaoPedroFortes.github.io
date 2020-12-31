@@ -43,7 +43,7 @@
             }
 
             to {
-                width: 40%;
+                width: 65%;
             }
         }
 
@@ -70,6 +70,10 @@
                 display: none;
             }
 
+            .nav-link{
+                color: black !important;
+            }
+
         }
 
         @media screen and (max-width: 768px) {
@@ -79,6 +83,7 @@
 
             #textoHeader {
                 text-align: center !important;
+                font-size: 5vw;
             }
 
             .content-desktop {
@@ -88,6 +93,10 @@
             .content-mobile {
                 display: block;
             }
+            .nav-link{
+                color: whitesmokegi !important;
+               
+            }
 
             @keyframes digitar {
                 from {
@@ -95,14 +104,16 @@
                 }
 
                 to {
-                    width: 80%;
+                    width: 55%;
                 }
             }
         }
     </style>
+
 </head>
 
 <body id="page-top">
+
     <!-- Navigation-->
     <nav class="navbar navbar-expand-lg bg-light text-uppercase fixed-top" id="mainNav" style="height: 60px">
         <div class="container">
@@ -117,11 +128,11 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger"
-                            href="#portfolio"  style="color:black !important">Projetos</a></li>
+                            href="#portfolio" >Projetos</a></li>
                     <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger"
-                            href="#about"  style="color:black !important">Sobre mim</a></li>
+                            href="#about">Sobre mim</a></li>
                     <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger"
-                            href="#contact"  style="color:black !important">Contato</a></li>
+                            href="#contact">Contato</a></li>
                 </ul>
             </div>
         </div>
@@ -138,7 +149,7 @@
                 style="width: 400px; z-index: 10; position: absolute; margin-top: -40%; margin-left: -20%;">
             <br>
             <br>
-            <h1 id="textoHeader " class="line digitar-animation">Olá Pessoa!</h1>
+            <h1 id="textoHeader" class="line digitar-animation">Olá Pessoa!</h1>
             <br>
             <p class="text-uppercase ">Eu sou o joão pedro fortes. (esse cara da foto) Se você está aqui é porque
                 quer saber um pouquinho sobre mim.
@@ -148,6 +159,23 @@
         </div>
 
     </header>
+
+
+    <script language=javascript type="text/javascript">
+        const now = new Date()
+        const hora = now.getHours()
+        var texto = document.getElementById('textoHeader');
+        if ((hora >= 5 && hora <= 12)) {
+           
+            texto.textContent = "Bom dia, Pessoa!"
+        }else if((hora >=12 && hora <= 18)){
+            texto.textContent = "Boa tarde, Pessoa!"
+        }else{
+            texto.textContent = "Boa noite, Pessoa!"
+        }
+
+
+    </script>
     <!-- Portfolio Section-->
     <section class="page-section portfolio" id="portfolio">
         <div class="container">
