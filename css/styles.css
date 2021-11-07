@@ -10088,13 +10088,13 @@ h3 {
   color: #fff;
 }
 #mainNav .navbar-nav li.nav-item a.nav-link:hover {
-  color: beige;
+  color: #2c3e50;
 }
 #mainNav .navbar-nav li.nav-item a.nav-link:active, #mainNav .navbar-nav li.nav-item a.nav-link:focus {
   color: #fff;
 }
 #mainNav .navbar-nav li.nav-item a.nav-link.active {
-  color: beige;
+  color: #2c3e50;
 }
 #mainNav .navbar-toggler {
   font-size: 80%;
@@ -10116,11 +10116,11 @@ h3 {
   }
   #mainNav .navbar-nav > li.nav-item > a.nav-link.active {
     color: #fff;
-    background: beige;
+    background: #2c3e50;
   }
   #mainNav .navbar-nav > li.nav-item > a.nav-link.active:active, #mainNav .navbar-nav > li.nav-item > a.nav-link.active:focus, #mainNav .navbar-nav > li.nav-item > a.nav-link.active:hover {
     color: #fff;
-    background: beige;
+    background: #2c3e50;
   }
 
   #mainNav.navbar-shrink {
@@ -10144,6 +10144,12 @@ h3 {
 }
 .masthead .masthead-avatar {
   width: 15rem;
+  margin-top: -10%;
+  
+}
+
+.masthead .masthead-avatar img{
+  padding-left: 15px;
 }
 
 @media (min-width: 992px) {
@@ -10257,5 +10263,5 @@ form .row:first-child .floating-label-form-group {
 }
 
 .copyright {
-  background-color: #1a252f;
+  background-color: #0c0c0c;
 }

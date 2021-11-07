@@ -7,8 +7,10 @@
     <meta name="description" content="" />
     <meta name="author" content="" />
     <title>João Pedro Fortes</title>
+    
     <!-- Favicon-->
     <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.0/font/bootstrap-icons.css">
     <!-- Font Awesome icons (free version)-->
     <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
     <!-- Google fonts-->
@@ -43,7 +45,7 @@
             }
 
             to {
-                width: 65%;
+                width: 35%;
             }
         }
 
@@ -70,10 +72,7 @@
                 display: none;
             }
 
-            .nav-link{
-                color: black !important;
-            }
-
+       
         }
 
         @media screen and (max-width: 768px) {
@@ -114,267 +113,162 @@
 
 <body id="page-top">
 
-    <!-- Navigation-->
-    <nav class="navbar navbar-expand-lg bg-light text-uppercase fixed-top" id="mainNav" style="height: 60px">
-        <div class="container">
+    
+    <div id='ingles' class="position-fixed">
+        <button id="btnIngles" class="btn js-scroll-trigger d-block text-center text-white rounded" onclick="toEnglish()" ><i class="bi bi-translate"></i> PT-br</button>
+    </div>
+    <div id='portugues' class="position-fixed" style="display: none;">
+        <button id="btnPortugues" class="btn js-scroll-trigger d-block text-center text-white rounded" onclick="toPortuguese()"><i class="bi bi-translate"></i> En-us</button>
+    </div>
 
-            <button
-                class="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold bg-primary text-white rounded"
-                type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
-                aria-expanded="false" aria-label="Toggle navigation" style="margin-top: -1%;">
-                Menu
-                <i class="fas fa-bars"></i>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger"
-                            href="#portfolio" >Projetos</a></li>
-                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger"
-                            href="#about">Sobre mim</a></li>
-                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger"
-                            href="#contact">Contato</a></li>
-                </ul>
+
+    <div class="masthead  text-white text-center row" style="margin:0; background-color: #0c0c0c; padding-bottom: 0;" >
+        <div class="col-sm-10 container" >
+            <div class="col-sm-12" style="text-align: left;">
+                <h1 id="textoHeader" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;" ></h1>
             </div>
         </div>
-    </nav>
-    <!-- Masthead-->
-    <header class="masthead  text-white text-center row" style="margin:0; background-color: #0c0c0c;">
-        <div class="col-xl-6 col-sm-12 container d-flex align-items-center flex-column">
+       
+        <div class="col-sm-10 container  align-items-center flex-column rounded-top" style="background-color: #ffffff35">
             <!-- Masthead Avatar Image-->
-            <img class="masthead-avatar mb-5 rounded-circle" src="assets/img/avatar.jpg" alt="" />
+            <img class="masthead-avatar mb-5 rounded-circle"  src="assets/img/avatar.jpg" alt="" />
             <!-- Masthead Heading-->
-        </div>
-        <div class="col-xl-6 col-sm-12" style="text-align: left;">
-            <img src="assets/img/seta.png" alt="" class="content-desktop"
-                style="width: 400px; z-index: 10; position: absolute; margin-top: -40%; margin-left: -20%;">
-            <br>
-            <br>
-            <h1 id="textoHeader" class="line digitar-animation">Olá Pessoa!</h1>
-            <br>
-            <p class="text-uppercase ">Eu sou o joão pedro fortes. (esse cara da foto) Se você está aqui é porque
-                quer saber um pouquinho sobre mim.
-                então... Let's go!
-            </p>
-
-        </div>
-
-    </header>
-
-
-    <script language=javascript type="text/javascript">
-        const now = new Date()
-        const hora = now.getHours()
-        var texto = document.getElementById('textoHeader');
-        if ((hora >= 5 && hora <= 12)) {
-           
-            texto.textContent = "Bom dia, Pessoa!"
-        }else if((hora >=12 && hora <= 18)){
-            texto.textContent = "Boa tarde, Pessoa!"
-        }else{
-            texto.textContent = "Boa noite, Pessoa!"
-        }
-
-
-    </script>
-    <!-- Portfolio Section-->
-    <section class="page-section portfolio" id="portfolio">
-        <div class="container">
-            <!-- Portfolio Section Heading-->
-            <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">projetos</h2>
-            <!-- Icon Divider-->
-            <hr>
-            <br>
-            <h4>Antes de mais nada, eu ainda sou um mero estudante sem experiência de mercado que gosta de fazer umas
-                paginas HTML. Então, sem mais delongas, <s> me arruma um Job aê</s>, deixo alguns dos meus projetos mais
-                legais
-                para vocês verem rsrs</h4>
-            <br>
-            <br>
-            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                <ol class="carousel-indicators">
-                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                </ol>
-                <div class="carousel-inner">
-                    <div class="carousel-item active ">
-                        <div class="card col-lg-5 col-md-6 mb-5" style="margin: 0 !important;">
-                            <img class="card-img-top" src="assets/img/03 - Receita.png" alt="Card image cap"
-                                style="margin-top: 5%; height: 300px;">
-                            <div class="card-body">
-                                <h5 class="card-title">Pagina Html e css puro</h5>
-                                <p class="card-text">Primera pagina desenvolvida com hmtl e css responsivo para a
-                                    materia de
-                                    Engenharia Web</p>
-                                <a href="https://github.com/JoaoPedroFortes/siteAulaWeb" title="siteAulaWeb"
-                                    class="btn btn-primary container btn-card">Ver Projeto</a>
-                            </div>
-                        </div>
-                        <div class="textoProjeto" style="float: right; margin-top: -30%; width: 50%;">
-                            <h4>Primera pagina desenvolvida com hmtl e css responsivo para a materia de Engenharia Web
-                            </h4>
-                            <br>
-                            <p> Nesse projeto foi feito o layout de um marketplace simples baseado em um mockup
-                                disponibilizado.</p>
-                            <a href="https://github.com/JoaoPedroFortes/siteAulaWeb" title="siteAulaWeb"
-                                class="btn btn-primary container ">Ver Projeto</a>
-                        </div>
+       
+            <section class="text-center" >
+                <div class="container">
+                
+                    <div class="col-sm-12">
+                        <h4>João Pedro Fortes</h4> 
                     </div>
-                    <div class="carousel-item">
-                        <div class="card col-md-6 col-lg-5 mb-5">
-                            <img class="card-img-top" src="assets/img/calc.png" alt="Card image cap"
-                                style="margin-top: 5%;  height: 300px;">
-                            <div class="card-body">
-                                <h5 class="card-title">Calculadora responsiva JS</h5>
-                                <p class="card-text">Calculadora responsiva feita com HTML CSS e javaScript puro usando
-                                    conceito
-                                    de programação modular</p>
-                                <a href="https://github.com/JoaoPedroFortes/calculadoraJs" title="calculadoraJs"
-                                    class="btn btn-primary container btn-card">Ver Projeto</a>
-                            </div>
-                        </div>
-                        <div class="textoProjeto" style="float: right; margin-top: -35%; width: 50%;">
-                            <h4>Calculadora responsiva feita com HTML CSS e javaScript puro usando
-                                conceito
-                                de programação modular</h4>
-                            <br>
-                            <p> Nesse projeto foi feita uma calculara em javaScript Modular contento também a opção de
-                                histórico de calculos. <br> <br>
-                                Os calculos podem ser digitados através dos botões ou no input de expressão</p>
-                            <a href="https://github.com/JoaoPedroFortes/calculadoraJs" title="calculadoraJs"
-                                class="btn btn-primary container ">Ver Projeto</a>
-                        </div>
+                    <div class="col-sm-12">
+                        <p id="trabalho"></p> 
                     </div>
-                    <div class="carousel-item">
-                        <div class="card col-md-6 col-lg-5 mb-5">
-                            <img class="card-img-top" src="assets/img/siteVue.png" alt="Card image cap"
-                                style="margin-top: 5%;  height: 300px;">
-                            <div class="card-body">
-                                <h5 class="card-title">Site Vue</h5>
-                                <p class="card-text">Front-end desenvolvido para realizar requisições de uma API rest
-                                    via AXIOS
-                                    utilizando Vue.JS</p>
-                                <a href="https://github.com/JoaoPedroFortes/SiteLojaemVue" title="SiteLojaemVue"
-                                    class="btn btn-primary container btn-card">Ver Projeto</a>
-                            </div>
-                        </div>
-                        <div class="textoProjeto" style="float: right; margin-top: -35%; width: 50%;">
-                            <h4>Front-end desenvolvido para realizar requisições de uma API rest
-                                via AXIOS
-                                utilizando Vue.JS</h4>
-                            <br>
-                            <p> Nesse projeto foi desenvolvido o Front-end utilizando VueJS e Axios para as requisições
-                                feitas em uma API disponibilizada. <br> <br>
-                                Foram feitas duas partes, sendo elas: Administrativa e Pagina do Cliente.</p>
-                            <a href="https://github.com/JoaoPedroFortes/SiteLojaemVue" title="SiteLojaemVue"
-                                class="btn btn-primary container ">Ver Projeto</a>
-                        </div>
+                    <div class="col-sm-12">
+                        <p id="estudo"></p>
                     </div>
-                    <div class="carousel-item">
-                        <div class="card col-md-6 col-lg-5 mb-5">
-                            <img class="card-img-top" src="assets/img/sistemaCrud.png" alt="Card image cap"
-                                style="margin-top: 5%;  height: 250px;">
-                            <div class="card-body">
-                                <h5 class="card-title">Sistema Java Spring + front feito com hmtl css e VueJS</h5>
-                                <p class="card-text">DASHBOARD CRUD utilizando VUE.js e AXIOS fazendo requisições na api
-                                    desenvolvida em SPRING BOOT para a materia de Engenharia Web 2 </p>
-                                <a href="https://github.com/JoaoPedroFortes/t2-web2" title="CRUD"
-                                    class="btn btn-primary container btn-card">Ver Projeto</a>
-                            </div>
-                        </div>
-                        <div class="textoProjeto" style="float: right; margin-top: -35%; width: 50%;">
-                            <h4>DASHBOARD CRUD utilizando VUE.js e AXIOS fazendo requisições na api
-                                desenvolvida em SPRING BOOT para a materia de Engenharia Web 2 </h4>
-                            <br>
-                            <p> Nesse projeto foi desenvolvido um sistema completo utilizando Java Spring no back-end e
-                                VueJS e Axios no front-end. <br> <br>
-                                O front-end desenvolvido serve para Administrar os produtos e pessoas do sistema, sendo
-                                que o mesmo só pode ser utilizado por um usuario admin</p>
-                            <a href="https://github.com/JoaoPedroFortes/t2-web2" title="CRUD"
-                                class="btn btn-primary container">Ver Projeto</a>
-                        </div>
+
+                    <div class="col-sm-12">
+                        <p id="sobre"></p>
+                    </div>
+
+                   
+                </div>
+            </section>
+            <section class="col-sm-12  mt-3 mb-4 align-items-center flex-column justify-center">
+                <div class="container-fluid border border-primary rounded pt-2">
+                    <h5 id="skills" >Habilidades</h5>
+                    <br>
+                    <div class="clearfix"></div>
+                    <div class="row wrap  justify-content-around">
+                        <p class="col-3">   <i class="bi bi-check-lg text-primary"></i>  Java 8</p>
+                        <p class="col-3"> <i class="bi bi-check-lg text-primary"></i> Spring Boot</p>
+                        <p class="col-3"> <i class="bi bi-check-lg text-primary"></i> Javascript</p>
+                        <p class="col-3"> <i class="bi bi-check-lg text-primary"></i> AngularJS</p>
+                        <p class="col-3"> <i class="bi bi-book"></i> Angular 7</p>
+                        <p class="col-3"> <i class="bi bi-book"></i> NextJS</p>
+                        <p class="col-3"> <i class="bi bi-book"></i> Firebase</p>
+
                     </div>
                 </div>
-                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
-            </div>
-
-        </div>
-    </section>
-    <!-- About Section-->
-    <section class="page-section text-white mb-0" id="about" style="background-color: #0c0c0c;">
-        <div class="container">
-            <!-- About Section Heading-->
-            <h2 class="page-section-heading text-center text-uppercase text-white">Sobre mim</h2>
-            <br>
-            <hr>
-            <br>
-
-            <div class="row " style="margin-left: -15%;">
-                <div class="col-lg-5 ml-auto" style="float: left; margin-left: 20% !important;">
-                    <img src="./assets/img/living.jpeg" class="imgSobre  mb-5 " alt="pac">
-                    <img src="./assets/img/techx.jpeg" class="imgSobre" id="living" alt="">
-                    <img src="./assets/img/pacman.jpeg" class="imgSobre" id="pac" alt="">
-                </div>
-                <div class="col-lg-4 col-sm-12 ml-auto textoSobre">
-                    <p class="lead" style="text-align: left;  ">Como já disse lá em
-                        cima, sou o João Pedro, mas podem me chamar de JP. Sou estudante
-                        do 7º periodo do curso de Sistemas de Informação pela
-                        UNIVERSIDADE FEDERAL DE MATO GROSSO DO SUL. Sou aspirante a DEV com preferência em FRONT-END.
-                        <br>
-                        <br>
-                        Também sou Técnico em Informatica pelo programa PRONATEC (não, eu não sei consertar
-                        impressora). Sou Mineiro e falo UAI. Gosto muito de Aprender coisas novas e conhecer pessoas
-                        legais. Também sou viciado em participar de evento e Startup Weekends
-                    </p>
-
-                </div>
-            </div>
-            <div class="container conhecer" style="text-align: center;">
-                <br>
-                <br>
-                <h4>Agora é a hora em que você quer me conhecer !</h4>
-            </div>
-        </div>
-    </section>
-
-    <section class="page-section text-center" id="contact">
-        <div class="container ">
-
-            <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Contato</h2>
-            <br>
-            <hr>
-            <br>
+                
+          <div class="mt-4">
             <div class="row">
                 <div class="col-lg-6 mb-5 mb-lg-0">
                     <br>
-                    <a class="btn btn-outline-dark btn-social mx-1"
+                    <a class="btn btn-outline-light btn-social mx-1"
                         href="https://www.facebook.com/joaopedro.b.fortes/"><i class="fab fa-fw fa-facebook-f"></i></a>
-                    <a class="btn btn-outline-dark btn-social mx-1  "
+                    <a class="btn btn-outline-light btn-social mx-1  "
                         href="https://www.linkedin.com/in/jo%C3%A3o-pedro-fortes/"><i
                             class="fab fa-fw fa-linkedin-in"></i></a>
-                    <a class="btn btn-outline-dark btn-social mx-1  " href="https://github.com/JoaoPedroFortes/"><i
+                    <a class="btn btn-outline-light btn-social mx-1  " href="https://github.com/JoaoPedroFortes/"><i
                             class="fab fa-fw fa-git"></i></a>
                 </div>
                 <div class="col-lg-6 mb-5 mb-lg-0">
-                    <h4 class="text-uppercase mb-4">E-mail:</h4>
+                    <h5 class="text-uppercase mb-1">E-mail:</h5>
                     <p class="lead mb-0">
                         jpedrofortes@outlook.com
                     </p>
                 </div>
+                <br>
+                <br>
+                <br>
             </div>
+          </div>
+                
+                <div class=" py-4 text-center text-white">
+                    <div class="container"><small id='rodape'>Feito com 🖤 em Sinop-MT - 2021</small></div>
+                </div>
+              
+            </section>
+
+         
         </div>
-    </section>
-    <!-- Copyright Section-->
-    <div class="copyright py-4 text-center text-white">
-        <div class="container"><small>Feito com 🖤 em Coxim - 2020</small></div>
+
     </div>
+
+
+    <script language=javascript type="text/javascript">
+
+        var trabalho = document.getElementById('trabalho');
+        var estudo = document.getElementById('estudo');
+        var sobre  = document.getElementById('sobre')
+        var habilidades  = document.getElementById('skills')
+        var rodape = document.getElementById('rodape')
+    
+            trabalho.innerText = 'Analista de Desenvolvimento na JMJ Sistemas e Consultorias'
+            estudo.innerText = 'Graduando em Sistemas de Informação pela Universidade Federal de Mato Grosso do Sul'
+            sobre.innerText = 'Sou desenvolvedor Web, sempre disposto a aprender coisas novas independente da linguagem, paradigma ou stack.'
+            habilidades.innerText="Habilidades"
+            rodape.innerText="Feito com 🖤 em Sinop-MT - 2021"
+    
+        const saudacoes = (lang)=>{
+            const now = new Date()
+            const hora = now.getHours()
+            var texto = document.getElementById('textoHeader');
+            if ((hora >= 5 && hora <= 12)) {
+            
+                texto.textContent = lang===1 ? "Bom dia!" : "Good Morning!"
+            }else if((hora >=12 && hora <= 18)){
+                texto.textContent = lang === 1 ? "Boa tarde!" : "Good Afternoon!"
+            }else{
+                texto.textContent = lang === 1 ? "Boa noite!" : "Good Evening!"
+            }
+
+        }
+    
+        const toPortuguese = ()=>{
+           
+            $( "#ingles" ).show();
+            $( "#portugues" ).hide();
+           
+            trabalho.innerText = 'Analista de Desenvolvimento na JMJ Sistemas e Consultorias'
+            estudo.innerText = 'Graduando em Sistemas de Informação pela Universidade Federal de Mato Grosso do Sul'
+            sobre.innerText = 'Sou desenvolvedor Web, sempre disposto a aprender coisas novas independente da linguagem, paradigma ou stack.'
+            habilidades.innerText="Habilidades"
+            rodape.innerText="Feito com 🖤 em Sinop-MT - 2021"
+            saudacoes(1)
+        }
+
+        const toEnglish= ()=>{
+            
+             $( "#ingles" ).hide();
+             $( "#portugues" ).show();
+ 
+
+           trabalho.innerText = 'Development Analyst at JMJ Sistemas e Consultorias'
+           estudo.innerText = 'Bachelor in Information Systems from the Federal University of Mato Grosso do Sul'
+           sobre.innerText = "I'm a web developer, always willing to learn new things about any language, paradigm or stack."
+           habilidades.innerText="Skills"
+           rodape.innerText="Made with 🖤 in Sinop-MT - 2021"
+           saudacoes(2)
+       }
+
+        toPortuguese()
+
+    </script>
+ 
+    
+
 
     <div class="scroll-to-top  position-fixed">
         <a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top"><i
