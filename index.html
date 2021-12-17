@@ -1,279 +1,367 @@
 <!DOCTYPE html>
 <html lang="pt">
-
-<head>
+  <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
     <meta name="description" content="" />
     <meta name="author" content="" />
     <title>João Pedro Fortes</title>
-    
+
     <!-- Favicon-->
     <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.0/font/bootstrap-icons.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.0/font/bootstrap-icons.css"
+    />
     <!-- Font Awesome icons (free version)-->
-    <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
+    <script
+      src="https://use.fontawesome.com/releases/v5.13.0/js/all.js"
+      crossorigin="anonymous"
+    ></script>
     <!-- Google fonts-->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
-    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet"
-        type="text/css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:400,700"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic"
+      rel="stylesheet"
+      type="text/css"
+    />
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="css/styles.css" rel="stylesheet" />
     <link href="css/styleSobre.css" rel="stylesheet" />
     <style>
+      .content-desktop {
+        display: block !important;
+      }
+
+      .content-mobile {
+        display: none;
+      }
+
+      .line {
+        overflow: hidden;
+        white-space: nowrap;
+        border-right: 2px solid rgba(200, 200, 200, 0.8);
+      }
+
+      .digitar-animation {
+        animation: piscar 500ms steps(40) infinite normal,
+          digitar 3s steps(40) 1s normal both;
+      }
+
+      @keyframes digitar {
+        from {
+          width: 0;
+        }
+
+        to {
+          width: 35%;
+        }
+      }
+
+      @keyframes piscar {
+        from {
+          border-right-color: rgba(200, 200, 200, 0.8);
+        }
+
+        to {
+          border-right-color: transparent;
+        }
+      }
+
+      @media screen and (min-width: 769px) {
+        .textoProjeto {
+          display: inline;
+        }
+
+        .btn-card {
+          display: none;
+        }
+
+        .card-text {
+          display: none;
+        }
+      }
+
+      @media screen and (max-width: 768px) {
+        .textoProjeto {
+          display: none;
+        }
+
+        #textoHeader {
+          text-align: center !important;
+          font-size: 4vw;
+        }
+
         .content-desktop {
-            display: block !important;
+          display: none !important;
         }
 
         .content-mobile {
-            display: none;
+          display: block;
         }
-
-        .line {
-            overflow: hidden;
-            white-space: nowrap;
-            border-right: 2px solid rgba(200, 200, 200, 0.8);
-        }
-
-        .digitar-animation {
-            animation: piscar 500ms steps(40) infinite normal, digitar 3s steps(40) 1s normal both;
+        .nav-link {
+          color: whitesmokegi !important;
         }
 
         @keyframes digitar {
-            from {
-                width: 0;
-            }
+          from {
+            width: 0;
+          }
 
-            to {
-                width: 35%;
-            }
+          to {
+            width: 55%;
+          }
         }
-
-        @keyframes piscar {
-            from {
-                border-right-color: rgba(200, 200, 200, 0.8);
-            }
-
-            to {
-                border-right-color: transparent;
-            }
-        }
-
-        @media screen and (min-width: 769px) {
-            .textoProjeto {
-                display: inline;
-            }
-
-            .btn-card {
-                display: none;
-            }
-
-            .card-text {
-                display: none;
-            }
-
-       
-        }
-
-        @media screen and (max-width: 768px) {
-            .textoProjeto {
-                display: none;
-            }
-
-            #textoHeader {
-                text-align: center !important;
-                font-size: 5vw;
-            }
-
-            .content-desktop {
-                display: none !important;
-            }
-
-            .content-mobile {
-                display: block;
-            }
-            .nav-link{
-                color: whitesmokegi !important;
-               
-            }
-
-            @keyframes digitar {
-                from {
-                    width: 0;
-                }
-
-                to {
-                    width: 55%;
-                }
-            }
-        }
+      }
     </style>
+  </head>
 
-</head>
-
-<body id="page-top">
-
+  <body id="page-top">
+    <div
+      class="position-fixed"
+      style="
+        width: 100%;
+        background-color: #0c0c0c;
+        display: flex;
+        justify-content: space-between;
+        z-index: 1000;
+        padding: 1px;
+      "
+    >
     
-    <div id='ingles' class="position-fixed">
-        <button id="btnIngles" class="btn js-scroll-trigger d-block text-center text-white rounded" onclick="toEnglish()" ><i class="bi bi-translate"></i> PT-br</button>
-    </div>
-    <div id='portugues' class="position-fixed" style="display: none;">
-        <button id="btnPortugues" class="btn js-scroll-trigger d-block text-center text-white rounded" onclick="toPortuguese()"><i class="bi bi-translate"></i> En-us</button>
-    </div>
 
-
-    <div class="masthead  text-white text-center row" style="margin:0; background-color: #0c0c0c; padding-bottom: 0;" >
-       
-        <div class="col-sm-10 col-xm-12 container" >
-            <div class="col-sm-12" style="text-align: left;">
-                <h1 id="textoHeader" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;" ></h1>
-            </div>
+      <div id="saudacoes" class="position-relative" >
+        <div>
+          <div
+            class="col-sm-12"
+            style="text-align: left; color: white; padding: 10px"
+          >
+            <h1
+              id="textoHeader"
+              style="
+                font-family: 'Lucida Sans', 'Lucida Sans Regular',
+                  'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana,
+                  sans-serif;
+                font-size: 18px;
+              "
+            ></h1>
+          </div>
         </div>
-      
-        <div class="col-sm-10 col-xm-12 container  align-items-center flex-column rounded-top" style="background-color: #ffffff35">
-            <!-- Masthead Avatar Image-->
-            <img class="masthead-avatar mb-5 rounded-circle"  src="assets/img/foto.jpg" alt="" style="margin-top: -10%;"/>
-            <!-- Masthead Heading-->
-       
-            <section class="text-center" >
-                <div class="container-fluid">
-                
-                    <div>
-                        <h4>João Pedro Fortes</h4> 
-                    </div>
-                    <div >
-                        <p id="trabalho"></p> 
-                    </div>
-                    <div >
-                        <p id="estudo"></p>
-                    </div>
+      </div>
+     
+      <div id="ingles" class="position-relative">
+        <button
+          id="btnIngles"
+          class="btn js-scroll-trigger d-block text-center text-white rounded"
+          onclick="toEnglish()"
+        >
+          <i class="bi bi-translate"></i> PT-br
+        </button>
+      </div>
+      <div id="portugues" class="position-relative" style="display: none">
+        <button
+          id="btnPortugues"
+          class="btn js-scroll-trigger d-block text-center text-white rounded"
+          onclick="toPortuguese()"
+        >
+          <i class="bi bi-translate"></i> En-us
+        </button>
+      </div>
+    </div>
 
-                    <div >
-                        <p id="sobre"></p>
-                    </div>
+    <div
+      class="masthead text-white text-center row"
+      style="margin: 0; background-image: url(https://images.freeimages.com/images/large-previews/607/city-night-1183855.jpg) ; padding-bottom: 0"
+    >
+      <div
+        class="
+          col-sm-10 col-xm-12
+          container
+          align-items-center
+          flex-column
+          rounded-top
+        "
+        style="background-color: #0c0c0c"
+      >
+        <!-- Masthead Avatar Image-->
+        <img
+          class="masthead-avatar mb-5 rounded-circle"
+          src="assets/img/foto.jpg"
+          alt=""
+          style="margin-top: -10%; border: 6px solid #0c0c0c;"
+        />
+        <!-- Masthead Heading-->
 
-                   
-                </div>
-            </section>
-            <section class="mt-3 mb-4 align-items-center flex-column justify-center">
-                <div class="container-fluid border border-primary rounded pt-2">
-                    <h5 id="skills" >Habilidades</h5>
-                    <br>
-                    <div class="clearfix"></div>
-                    <div class="row wrap  justify-content-around">
-                        <p class="col-md-3 col-xs-12 ">  <i class="bi bi-check-lg text-primary"></i>  Java 8</p>
-                        <p class="col-md-3 col-xs-12 "> <i class="bi bi-check-lg text-primary"></i> Spring Boot</p>
-                        <p class="col-md-3 col-xs-12 "> <i class="bi bi-check-lg text-primary"></i> Javascript</p>
-                        <p class="col-md-3 col-xs-12 "> <i class="bi bi-check-lg text-primary"></i> AngularJS</p>
-                        <p class="col-md-3 col-xs-12 "> <i class="bi bi-book"></i> Angular 7</p>
-                        <p class="col-md-3 col-xs-12 "> <i class="bi bi-book"></i> NextJS</p>
-                        <p class="col-md-3 col-xs-12 "> <i class="bi bi-book"></i> Firebase</p>
-                    </div>
-                </div>
-                
-          <div class="mt-4">
-            <div class="row">
-                <div class="col-lg-6 mb-5 mb-lg-0">
-                    <br>
-                    <a class="btn btn-outline-light btn-social mx-1"
-                        href="https://www.facebook.com/joaopedro.b.fortes/"><i class="fab fa-fw fa-facebook-f"></i></a>
-                    <a class="btn btn-outline-light btn-social mx-1  "
-                        href="https://www.linkedin.com/in/jo%C3%A3o-pedro-fortes/"><i
-                            class="fab fa-fw fa-linkedin-in"></i></a>
-                    <a class="btn btn-outline-light btn-social mx-1  " href="https://github.com/JoaoPedroFortes/"><i
-                            class="fab fa-fw fa-git"></i></a>
-                </div>
-                <div class="col-lg-6 mb-5 mb-lg-0">
-                    <h5 class="text-uppercase mb-1">E-mail:</h5>
-                    <p class="lead mb-0">
-                        jpedrofortes@outlook.com
-                    </p>
-                </div>
-                <br>
-                <br>
-                <br>
+        <section class="text-center">
+          <div class="container-fluid">
+            <div>
+              <h4>João Pedro Fortes</h4>
+            </div>
+            <div>
+              <p id="trabalho"></p>
+            </div>
+            <div>
+              <p id="estudo"></p>
+            </div>
+
+            <div>
+              <p id="sobre"></p>
             </div>
           </div>
-                
-                <div class=" py-4 text-center text-white">
-                    <div class="container"><small id='rodape'>Feito com 🖤 em Sinop-MT - 2021</small></div>
-                </div>
-              
-            </section>
+        </section>
+        <section
+          class="mt-3 mb-4 align-items-center flex-column justify-center"
+        >
+          <div class="container-fluid border border-primary rounded pt-2">
+            <h5 id="skills">Habilidades</h5>
+            <br />
+            <div class="clearfix"></div>
+            <div class="row wrap justify-content-around">
+              <p class="col-md-3 col-xs-12">
+                <i class="bi bi-check-lg text-primary"></i> Java 8
+              </p>
+              <p class="col-md-3 col-xs-12">
+                <i class="bi bi-check-lg text-primary"></i> Spring Boot
+              </p>
+              <p class="col-md-3 col-xs-12">
+                <i class="bi bi-check-lg text-primary"></i> Javascript
+              </p>
+              <p class="col-md-3 col-xs-12">
+                <i class="bi bi-check-lg text-primary"></i> AngularJS
+              </p>
+              <p class="col-md-3 col-xs-12">
+                <i class="bi bi-book"></i> Angular 7
+              </p>
+              <p class="col-md-3 col-xs-12">
+                <i class="bi bi-book"></i> NextJS
+              </p>
+              <p class="col-md-3 col-xs-12">
+                <i class="bi bi-book"></i> Firebase
+              </p>
+            </div>
+          </div>
 
-         
-        </div>
+          <div class="mt-4">
+            <div class="row">
+              <div class="col-lg-6 mb-5 mb-lg-0">
+                <br />
+                <a
+                  class="btn btn-outline-light btn-social mx-1"
+                  href="https://www.facebook.com/joaopedro.b.fortes/"
+                  ><i class="fab fa-fw fa-facebook-f"></i
+                ></a>
+                <a
+                  class="btn btn-outline-light btn-social mx-1"
+                  href="https://www.linkedin.com/in/jo%C3%A3o-pedro-fortes/"
+                  ><i class="fab fa-fw fa-linkedin-in"></i
+                ></a>
+                <a
+                  class="btn btn-outline-light btn-social mx-1"
+                  href="https://github.com/JoaoPedroFortes/"
+                  ><i class="fab fa-fw fa-git"></i
+                ></a>
+              </div>
+              <div class="col-lg-6 mb-5 mb-lg-0">
+                <h5 class="text-uppercase mb-1">E-mail:</h5>
+                <p class="lead mb-0">jpedrofortes@outlook.com</p>
+              </div>
+              <br />
+              <br />
+              <br />
+            </div>
+          </div>
 
+          <div class="py-4 text-center text-white">
+            <div class="container">
+              <small id="rodape">Feito com 🖤 em Sinop-MT - 2021</small>
+            </div>
+          </div>
+        </section>
+      </div>
     </div>
 
+    <script language="javascript" type="text/javascript">
+      var trabalho = document.getElementById('trabalho');
+      var estudo = document.getElementById('estudo');
+      var sobre = document.getElementById('sobre');
+      var habilidades = document.getElementById('skills');
+      var rodape = document.getElementById('rodape');
 
-    <script language=javascript type="text/javascript">
+      trabalho.innerText =
+        'Analista de Desenvolvimento na JMJ Sistemas e Consultorias';
+      estudo.innerText =
+        'Bacharel em Sistemas de Informação pela Universidade Federal de Mato Grosso do Sul';
+      sobre.innerText =
+        'Sou desenvolvedor Web, sempre disposto a aprender coisas novas independente da linguagem, paradigma ou stack.';
+      habilidades.innerText = 'Habilidades';
+      rodape.innerText = 'Feito com 🖤 em Sinop-MT - 2021';
 
-        var trabalho = document.getElementById('trabalho');
-        var estudo = document.getElementById('estudo');
-        var sobre  = document.getElementById('sobre')
-        var habilidades  = document.getElementById('skills')
-        var rodape = document.getElementById('rodape')
-    
-            trabalho.innerText = 'Analista de Desenvolvimento na JMJ Sistemas e Consultorias'
-            estudo.innerText = 'Graduando em Sistemas de Informação pela Universidade Federal de Mato Grosso do Sul'
-            sobre.innerText = 'Sou desenvolvedor Web, sempre disposto a aprender coisas novas independente da linguagem, paradigma ou stack.'
-            habilidades.innerText="Habilidades"
-            rodape.innerText="Feito com 🖤 em Sinop-MT - 2021"
-    
-        const saudacoes = (lang)=>{
-            const now = new Date()
-            const hora = now.getHours()
-            var texto = document.getElementById('textoHeader');
-        
-            if ((hora >= 5 && hora <= 12)) {
-            
-                texto.textContent = lang===1 ? "Bom dia!" : "Good Morning!"
-            }else if((hora >=12 && hora <= 18)){
-                texto.textContent = lang === 1 ? "Boa tarde!" : "Good Afternoon!"
-            }else{
-                texto.textContent = lang === 1 ? "Boa noite!" : "Good Evening!"
-            }
+      const saudacoes = (lang) => {
+        const now = new Date();
+        const hora = now.getHours();
+        var texto = document.getElementById('textoHeader');
 
+        if (hora >= 5 && hora <= 12) {
+          texto.textContent = lang === 1 ? 'Bom dia!' : 'Good Morning!';
+        } else if (hora >= 12 && hora <= 18) {
+          texto.textContent = lang === 1 ? 'Boa tarde!' : 'Good Afternoon!';
+        } else {
+          texto.textContent = lang === 1 ? 'Boa noite!' : 'Good Evening!';
         }
-    
-        const toPortuguese = ()=>{
-           
-            $( "#ingles" ).show();
-            $( "#portugues" ).hide();
-           
-            trabalho.innerText = 'Analista de Desenvolvimento na JMJ Sistemas e Consultorias'
-            estudo.innerText = 'Graduando em Sistemas de Informação pela Universidade Federal de Mato Grosso do Sul'
-            sobre.innerText = 'Sou desenvolvedor Web, sempre disposto a aprender coisas novas independente da linguagem, paradigma ou stack.'
-            habilidades.innerText="Habilidades"
-            rodape.innerText="Feito com 🖤 em Sinop-MT - 2021"
-            saudacoes(1)
-        }
+      };
 
-        const toEnglish= ()=>{
-            
-             $( "#ingles" ).hide();
-             $( "#portugues" ).show();
- 
+      const toPortuguese = () => {
+        $('#ingles').show();
+        $('#portugues').hide();
 
-           trabalho.innerText = 'Development Analyst at JMJ Sistemas e Consultorias'
-           estudo.innerText = 'Bachelor in Information Systems from the Federal University of Mato Grosso do Sul'
-           sobre.innerText = "I'm a web developer, always willing to learn new things about any language, paradigm or stack."
-           habilidades.innerText="Skills"
-           rodape.innerText="Made with 🖤 in Sinop-MT - 2021"
-           saudacoes(2)
-       }
+        trabalho.innerText =
+          'Analista de Desenvolvimento na JMJ Sistemas e Consultorias';
+        estudo.innerText =
+          'Bacharel em Sistemas de Informação pela Universidade Federal de Mato Grosso do Sul';
+        sobre.innerText =
+          'Sou desenvolvedor Web, sempre disposto a aprender coisas novas independente da linguagem, paradigma ou stack.';
+        habilidades.innerText = 'Habilidades';
+        rodape.innerText = 'Feito com 🖤 em Sinop-MT - 2021';
+        saudacoes(1);
+      };
 
-        toPortuguese()
+      const toEnglish = () => {
+        $('#ingles').hide();
+        $('#portugues').show();
 
+        trabalho.innerText =
+          'Development Analyst at JMJ Sistemas e Consultorias';
+        estudo.innerText =
+          'Bachelor in Information Systems from the Federal University of Mato Grosso do Sul';
+        sobre.innerText =
+          "I'm a web developer, always willing to learn new things about any language, paradigm or stack.";
+        habilidades.innerText = 'Skills';
+        rodape.innerText = 'Made with 🖤 in Sinop-MT - 2021';
+        saudacoes(2);
+      };
+
+      (() => {
+        setTimeout(() => {
+          window.navigator.language.toLowerCase() === 'pt-br'
+            ? toPortuguese()
+            : toEnglish();
+        }, 500);
+      })();
     </script>
- 
-    
 
-
-    <div class="scroll-to-top  position-fixed">
-        <a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top"><i
-                class="fa fa-chevron-up"></i></a>
+    <div class="scroll-to-top position-fixed">
+      <a
+        class="js-scroll-trigger d-block text-center text-white rounded"
+        href="#page-top"
+        ><i class="fa fa-chevron-up"></i
+      ></a>
     </div>
 
     <!-- Bootstrap core JS-->
@@ -286,6 +374,5 @@
     <script src="assets/mail/contact_me.js"></script>
     <!-- Core theme JS-->
     <script src="js/scripts.js"></script>
-</body>
-
+  </body>
 </html>
