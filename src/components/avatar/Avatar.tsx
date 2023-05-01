@@ -2,7 +2,7 @@ import React from 'react';
 import * as Avatar from '@radix-ui/react-avatar';
 import styles from './Avatar.module.css';
 
-function AvatarComponent(props) {
+function AvatarComponent(props: any) {
     const { src, alt } = props;
     return (
         <div style={{ display: 'flex', gap: 20 }}>

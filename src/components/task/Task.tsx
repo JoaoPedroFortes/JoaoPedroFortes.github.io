@@ -7,8 +7,13 @@ export interface ITask {
     dataFinal: Date
 }
 
-function TaskComponent({ id, title, onExcluirTask }) {
-
+export interface TaskProps{
+    id:number,
+    title:string,
+    onExcluirTask: any
+}
+function TaskComponent(props: TaskProps) {
+    const { id, title, onExcluirTask }= props
     const [lancamentos, setLancamentos] = useState<ITask[]>([
         {
             dataInicial: new Date,
