@@ -71,7 +71,7 @@ function TaskComponent(props: TaskProps) {
 
 
     return (
-        <div key={id} className='max-w-md bg-neutral-900 rounded h-40 m-1'>
+        <div key={id} className='max-w-md mobile-w  bg-neutral-900 rounded h-40 m-1'>
             <div className='flex flex-col p-1'>
                 <div id='header' className='w-full flex'>
                     <p className='w-4/5 pl-1 text-center'>{title}</p>

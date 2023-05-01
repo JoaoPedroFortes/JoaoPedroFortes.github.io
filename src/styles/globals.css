@@ -25,6 +25,12 @@ body {
   background: #010101;
 }
 
+@media (max-width: 767px) {
+  .mobile-w {
+      max-width: 100%;
+  }
+}
+
 
 input {
   color: black;
