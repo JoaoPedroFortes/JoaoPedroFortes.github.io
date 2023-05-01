@@ -19,7 +19,7 @@ export default function Home() {
       <Head>
         <title>João Pedro Fortes</title>
       </Head>
-      <main className={`flex min-h-screen flex-col items-center md:p-24 ${inter.className}`}>
+      <main className={`main flex min-h-screen flex-col items-center md:p-24 ${inter.className}`}>
         <section className={`bg-black rounded-t w-full container `}>
           <div className="flex flex-row p-2 md:w-1/4  ">
             <div className="w-20">

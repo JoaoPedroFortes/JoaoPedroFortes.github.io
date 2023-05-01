@@ -19,15 +19,30 @@
 
 body {
   color: rgb(var(--foreground-rgb));
+  overflow-x: hidden;
   /* background: linear-gradient(to bottom,
       transparent,
       rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb)); */
+  /*background: #010101;*/
+}
+
+.main {
   background: #010101;
+}
+
+.mobile-w {
+  max-width: 32%;
+}
+
+@media (orientation: landscape) {
+  .mobile-w {
+    max-width: 48%;
+  }
 }
 
 @media (max-width: 767px) {
   .mobile-w {
-      max-width: 100%;
+    max-width: 100%;
   }
 }
 
