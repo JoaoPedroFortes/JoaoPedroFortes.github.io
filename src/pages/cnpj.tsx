@@ -18,7 +18,7 @@ export default function Tasks() {
 
     const url: string = 'https://brasilapi.com.br/api/cnpj/v1/'
 
-    const onChangeCNPJ = (e) => {
+    const onChangeCNPJ = (e: any) => {
         const cnpj = e.target.value.replace(/[.-]/g, '');
         setCnpj(cnpj)
     }
