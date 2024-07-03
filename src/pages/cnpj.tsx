@@ -1,7 +1,6 @@
 import { Inter } from 'next/font/google';
 import { useState } from 'react';
 import Head from 'next/head';
-import InputMask from 'react-input-mask';
 const inter = Inter({ subsets: ['latin'] })
 
 type Empresa = {
@@ -67,7 +66,7 @@ export default function Tasks() {
                     <div className='w-full flex mr-2'>
                         <div className={`w-2/3`}>
                             <label htmlFor="cnpj">CNPJ:</label>
-                            <InputMask
+                            <input
                                 id="cnpj"
                                 placeholder="Digite o CNPJ"
                                 autoComplete="off"
