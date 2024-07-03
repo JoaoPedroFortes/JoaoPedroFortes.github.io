@@ -48,8 +48,15 @@ export default function Home() {
         <section className={`bg-black container rounded-b h-80 overflow-y-auto`}>
           <div className='flex flex-wrap justify-start p-2'>
             <span className='w-full flex'><Lightbulb size={20} color='yellow' /> <span className='ml-1'>Utils</span></span>
-            <span className='ml-2 mt-1 flex'>
-              <CornerDownRight size={15} /> <Link href="/tasks" className='ml-1'>Gerenciador de lançamentos de horas</Link>
+            <span className='ml-2 mt-1 flex flex-wrap'>
+              <div className='w-full flex'>
+                <CornerDownRight size={15} /> <Link href="/tasks" className='ml-1 hover:text-gray-700'>Gerenciador de lançamentos de horas</Link>
+
+              </div>
+              <div className='w-full flex' >
+                <CornerDownRight size={15} /> <Link href="/cnpj" className='ml-1 hover:text-gray-700'>Consulta de CNPJ na API Brasil </Link>
+
+              </div>
             </span>
           </div>
 
