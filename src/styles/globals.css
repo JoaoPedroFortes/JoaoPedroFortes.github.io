@@ -67,3 +67,21 @@ input {
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
+
+.thumb-teste img{
+  width: 50% !important;
+}
+
+.j-gray{
+  background-color: #dee1e6 !important;
+}
+
+.j-black{
+  background-color: black !important;
+}
+
+.chrome-tabs-bottom-bar{
+  height: 2px  !important;
+  bottom: 2px !important;
+  
+}
