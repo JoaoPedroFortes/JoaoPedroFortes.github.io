@@ -116,42 +116,6 @@ export default function Home() {
             }
           </div>
         </section>
-        <section className={`bg-black container`}>
-          <span className='ml-2 mt-1 flex flex-wrap'>
-            {/* <div className='w-full'>
-              <CardComponent title='Angular 18 rating lib' img='assets/img/npm.svg' href='https://www.npmjs.com/package/@joaopedrofortes/angular-rating'></CardComponent>
-            </div> */}
-            <div className='w-full'>
-              <Tabs
-                className={'font-bold j-black'}
-                onTabClose={close}
-                onTabReorder={reorder}
-                onTabActive={active}
-                tabs={tabs}
-              />
-            </div>
-            <div className='w-full j-black  mt-2 h-80 rounded-b'>
-              {
-                activeTab === SKILLS && (
-                  <div className='xs:w-12/12 md:w-12/12'>
-                    {page.skills}
-                  </div>
-                )
-              }
-
-             
-
-              {
-                activeTab === UTILS && (
-                  <div>
-                    
-                    <Link target='_blank' href={'https://www.npmjs.com/package/@joaopedrofortes/angular-rating'}>npm @joaopedrofortes/angular-rating</Link>
-                  </div>
-                )
-              }
-            </div>
-          </span>
-        </section>
       </main>
     </div>
 
